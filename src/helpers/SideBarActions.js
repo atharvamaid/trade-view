@@ -11,16 +11,16 @@ export const motions = [
   {id : 4, content: "RepeatAnimation"},
 ];
 
-export const getDesiredComponent = (componentName) => {
+export const getDesiredComponent = (componentName, spriteId) => {
   switch (componentName) {
     case "Move_Steps":
-      return <MoveSteps />;
+      return <MoveSteps spriteId={spriteId}/>;
     case "Turn_Degrees":
-      return <TurnDegrees />;
+      return <TurnDegrees spriteId={spriteId}/>;
     case "Goto_XY":
-      return <GotoXY />;
+      return <GotoXY spriteId={spriteId}/>;
     case "RepeatAnimation":
-      return <RepeatAnimation />;
+      return <RepeatAnimation spriteId={spriteId}/>;
     default:
       return "";
   }

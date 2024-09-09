@@ -1,9 +1,14 @@
+import { Card,CardContent,Typography } from "@mui/material";
 import React from "react";
 
 export const RepeatAnimation = () => {
   return (
-    <div className="flex flex-row flex-wrap bg-blue-500 text-white px-2 py-1 my-2 text-sm cursor-pointer">
-      Repeat Animation
-    </div>
+    <Card sx={{ minWidth: 220 , backgroundColor : "#1976d2", height:60}}>
+      <CardContent>
+        <Typography className="text-white" variant="p" component="div">
+          {"Repeat Animation"}
+        </Typography>
+      </CardContent>
+    </Card>
   );
 };

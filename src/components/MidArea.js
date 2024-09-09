@@ -1,45 +1,57 @@
 import React from "react";
-import { Droppable ,Draggable} from "react-beautiful-dnd";
+import { Droppable, Draggable } from "react-beautiful-dnd";
 import "../css/index.css";
 import { useAppProvider } from "../context/AppProvider";
 import { getDesiredComponent } from "../helpers/SideBarActions";
 
 export default function MidArea() {
-  const { clonedMotions } = useAppProvider();
+  const { clonedMotions, totalSprites ,currentSelectedSprite} = useAppProvider();
   return (
-    <div className="flex-1 h-full overflow-auto">
-      <Droppable type="MOTION" droppableId="clone-container">
-        {(provided) => (
+    <div className="flex-1 flex flex-col h-screen overflow-auto">
+      <div className="font-bold mt-1 ml-1 h-[5%]"> {"Mid Area"} </div>
+      <div className="h-[95%] flex flex-wrap gap-4 p-4">
+        {totalSprites.map((sprite, index) => (
           <div
-            className="clone-container"
-            {...provided.droppableProps}
-            ref={provided.innerRef}
+            key={`${sprite.name}-${index}`}
+            className={`${currentSelectedSprite === sprite.id ? "bg-sky-100" : ""} flex flex-col w-[100%] h-80 bg-white shadow-md rounded-lg overflow-auto`}
           >
-            {/* This area will not have anything in the beginning */}
-            {clonedMotions.map((motion, index) => (
-              <Draggable
-                key={`clone-${motion.id}`}
-                draggableId={`clone-${motion.id}`}
-                index={index}
-                isDragDisabled={true}
-                
-              >
+            <div className=" h-[10%] object-cover text-center font-bold text-xl">
+              {sprite.name}
+            </div>
+            <div className={`${currentSelectedSprite === sprite.id ? "bg-sky-100" : ""} p-4 h-[90%] `}>
+              <Droppable type="MOTION" droppableId={`clone_container-${sprite.id}`}>
                 {(provided) => (
                   <div
-                    className="draggable cloned"
+                    className={`${currentSelectedSprite === sprite.id ? "bg-sky-100" : ""} clone-container`}
+                    {...provided.droppableProps}
                     ref={provided.innerRef}
-                    {...provided.draggableProps}
-                    {...provided.dragHandleProps}
                   >
-                    {getDesiredComponent(motion.content)}
+                    {clonedMotions[sprite.id].map((motion, index) => (
+                      <Draggable
+                        key={`clone-${motion.id}-${index}`}
+                        draggableId={`clone-${sprite.id}-${index}`}
+                        index={index}
+                      >
+                        {(provided) => (
+                          <div
+                            className="draggable cloned my-2"
+                            ref={provided.innerRef}
+                            {...provided.draggableProps}
+                            {...provided.dragHandleProps}
+                          >
+                            {getDesiredComponent(motion.content, sprite.id)}
+                          </div>
+                        )}
+                      </Draggable>
+                    ))}
+                    {provided.placeholder}
                   </div>
                 )}
-              </Draggable>
-            ))}
-            {provided.placeholder}
+              </Droppable>
+            </div>
           </div>
-        )}
-      </Droppable>{" "}
+        ))}
+      </div>
     </div>
   );
 }
