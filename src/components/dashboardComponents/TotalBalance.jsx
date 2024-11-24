@@ -92,7 +92,7 @@ const TotalBalance = () => {
             },
           ]}
           yAxis={[{ data: [90, 95, 100, 105] }]}
-          width={600}
+          width={500}
           height={250}
         />
       </Card>

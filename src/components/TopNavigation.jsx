@@ -22,7 +22,7 @@ const TopNavigation = () => {
       <Typography
         variant="h6"
         gutterBottom
-        sx={{ marginRight: "515px", marginTop: "4px", fontWeight: "bold" }}
+        sx={{marginRight:"20px",  marginTop: "4px", fontWeight: "bold" }}
       >
         Welcome back, Alex
       </Typography>

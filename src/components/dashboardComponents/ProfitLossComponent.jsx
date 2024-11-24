@@ -81,7 +81,7 @@ const ProfitLossComponent = () => {
               />
               <div>
                 <Typography variant="body2" sx={{ fontWeight: "400" }}>
-                  Profit Target
+                  Daily Loss Limit
                 </Typography>
                 <Typography
                   color="textDisabled"
@@ -101,7 +101,7 @@ const ProfitLossComponent = () => {
           </div>
           <div>
             <Typography variant="caption" color="textDisabled">
-              Equity Breach Level : <Typography variant="caption" color="error">$124,90.0</Typography>
+              Equity Breach : <Typography variant="caption" color="error">$124,90.0</Typography>
             </Typography>
           </div>
         </Card>

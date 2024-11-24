@@ -40,7 +40,7 @@ const NotificationsComponent = () => {
 
   useEffect(() => {
     (async () => {
-      await fetch("/server/Notifications.json", {
+      await fetch("./server/Notifications.json", {
         method: "GET",
         headers: { "Cache-Control": "no-cache", Accept: "application/json" },
         cache: "no-store",

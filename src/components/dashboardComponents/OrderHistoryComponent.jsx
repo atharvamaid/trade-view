@@ -53,7 +53,7 @@ const OrderHistoryComponent = () => {
 
   useEffect(() => {
     (async () => {
-      await fetch("/server/OrderHistory.json", {
+      await fetch("./server/OrderHistory.json", {
         method: "GET",
         headers: { "Cache-Control": "no-cache", Accept: "application/json" },
         cache: "no-store",
