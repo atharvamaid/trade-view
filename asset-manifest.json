@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/juspay-scratch-app/static/css/main.26abe8fb.css",
-    "main.js": "/juspay-scratch-app/static/js/main.eb78776c.js",
-    "index.html": "/juspay-scratch-app/index.html",
-    "main.26abe8fb.css.map": "/juspay-scratch-app/static/css/main.26abe8fb.css.map",
-    "main.eb78776c.js.map": "/juspay-scratch-app/static/js/main.eb78776c.js.map"
+    "main.css": "/trade-view/static/css/main.adbaf8fb.css",
+    "main.js": "/trade-view/static/js/main.ee9128ff.js",
+    "index.html": "/trade-view/index.html",
+    "main.adbaf8fb.css.map": "/trade-view/static/css/main.adbaf8fb.css.map",
+    "main.ee9128ff.js.map": "/trade-view/static/js/main.ee9128ff.js.map"
   },
   "entrypoints": [
-    "static/css/main.26abe8fb.css",
-    "static/js/main.eb78776c.js"
+    "static/css/main.adbaf8fb.css",
+    "static/js/main.ee9128ff.js"
   ]
 }

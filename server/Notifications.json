@@ -1,0 +1,36 @@
+{
+    "name":"notifications",
+    "status" : "success",
+    "data" : [
+        {
+            "time" : "12",
+            "type" : "RulesSoftBreach",
+            "message" : "day since a trade was placed, closed for now"
+        },
+        {
+            "time" : "9",
+            "type" : "RulesSoftPass",
+            "message" : "closed trade was not placed with a stop loss"
+        },
+        {
+            "time" : "32",
+            "type" : "RulesSoftBreach",
+            "message" : "day since a trade was placed, closed for now"
+        },
+        {
+            "time" : "19",
+            "type" : "RulesSoftBreach",
+            "message" : "closed trade was not placed with a stop loss"
+        },
+        {
+            "time" : "4",
+            "type" : "RulesSoftBreach",
+            "message" : "day since a trade was placed, closed for now"
+        },
+        {
+            "time" : "3",
+            "type" : "RulesSoftPass",
+            "message" : "closed trade was not placed with a stop loss"
+        }
+    ]
+}
