@@ -1,4 +1,4 @@
-# Scratch starter project
+# React Redux Trade View App
 
 To get started:
 - clone the repository using git clone  https://github.com/atharvamaid/trade-view.git
